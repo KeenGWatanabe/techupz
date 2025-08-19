@@ -1,7 +1,8 @@
 # alifeWSL | wsl | yarn 
 
 Yarn : Linux, WSL
-Accessing the project follow below steps"
+Accessing the project follow below steps:
+Open VS code, any folder is fine.
 select bash / Ubuntu terminal, or type 'wsl' at powershell terminal,
 you will be at root/home/rger aka ~/
 
