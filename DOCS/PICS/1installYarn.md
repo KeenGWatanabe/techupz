@@ -38,6 +38,7 @@ npx create-next-app@latest --typescript --use-yarn my-app
 - The `--use-yarn` flag ensures the project uses `yarn.lock` from the start.
 
 ---
+![npxSetup](/DOCS/PICS/npxNextjsCreate.png)
 
 ### **5. Key Notes**
 - **Never mix Windows/WSL package managers**. Use either:

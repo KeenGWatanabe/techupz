@@ -3,9 +3,10 @@
 Yarn : Linux, WSL
 Accessing the project follow below steps"
 at Ubuntu terminal:
-![UbuntuLTSterminal](/DOCS/PICS/UbuntuLTSterminal.png)
+
 cd into project directory, and type `code .`
-![cdCode](/DOCS/PICS/cdCode.png)
+WSL ~nextjs/techupz
+
 
 Branching: 
 ## git  |    vercel             |     special code setup
@@ -14,9 +15,9 @@ Branching:
   dev   |  preview/development  |  full code as per video
 
 ## file location
-loc: /home/rger/nextjs/alifeWSL
+loc: /home/rger/nextjs/techupz
 terminal: ubuntu-wsl
-github: https://github.com/KeenGWatanabe/alifeWSL
+github: https://github.com/KeenGWatanabe/techupz
 
 
 # initialize project
@@ -26,9 +27,9 @@ npx create-next-app --typescript --use-yarn
 ```bash
 npx create-next-app --typescript
 ```
-![nextjs setup](/images/nextSetup.png)
+![nextjs setup](/DOCS/PICS/npxNextjsCreate.png)
 
-cd .. >alife_win
+cd .. >techupz
 ```shell (window/WSL)
 yarn dev
 ```
@@ -96,12 +97,14 @@ CHECK: db name: / swim / nextjs
 
 # prisma db 
 ```shell
-yarn add @prisma/client (window/WSL)
+(window/WSL)
+yarn add @prisma/client 
 yarn add prisma --dev
 yarn prisma db push
 ```
 ```bash
-npm install @prisma/client (debian)
+(debian)
+npm install @prisma/client 
 
 npx prisma db push
 ```
@@ -190,7 +193,7 @@ Or when useSearchParams() is resolved #
 ## world-countries 3:41:23, 3:44:33
 ```bash
 (window/WSL)
-yarn add world-counties
+yarn add world-countries
 yarn add country-flag-icons
 yarn add react-select
 
