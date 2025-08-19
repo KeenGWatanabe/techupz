@@ -2,17 +2,19 @@
 
 Yarn : Linux, WSL
 Accessing the project follow below steps"
-at Ubuntu terminal:
+select bash / Ubuntu terminal, or type 'wsl' at powershell terminal,
+you will be at root/home/rger aka ~/
 
-cd into project directory, and type `code .`
-WSL ~nextjs/techupz
+cd ~nextjs/techupz into project directory, and type `code .`
+
 
 
 Branching: 
-## git  |    vercel             |     special code setup
-  prod  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx
-  main  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx
-  dev   |  preview/development  |  full code as per video
+|## git  |    vercel             |     special code setup                                        |
+|--------|-----------------------|---------------------------------------------------------------|
+|  prod  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx |
+|  main  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx |
+|  dev   |  preview/development  |  full code as per video                                       |
 
 ## file location
 loc: /home/rger/nextjs/techupz
