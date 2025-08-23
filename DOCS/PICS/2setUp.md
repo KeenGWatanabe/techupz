@@ -245,8 +245,27 @@ https://cloudinary.com/
 sign up for free, 
 sign up with google (mckeen.it)
 
+# next-cloudinary 4:19:50
+https://next.cloudinary.dev/installation
+1. Installation
+```bash
+(window/WSL)
+yarn add next-cloudinary
+(debian/linux)
+npm install next-cloudinary
+```
+2. Configuration: add .env from cloudinary account
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+<Your Cloud Name> is from your https://cloudinary.com/ account
 
-# Deployment to Vercel
+```bash
+(window/WSL)
+
+(debian/linux)
+
+```
+stop at : :
+# Deployment to Vercel ##############################
 ```shell
 yarn build
   OR
