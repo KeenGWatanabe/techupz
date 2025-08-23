@@ -13,6 +13,7 @@ import CountrySelect from '../inputs/CountrySelect';
 import dynamic from 'next/dynamic';
 import Input from '../inputs/Input';
 import Counter from '../inputs/Counter';
+import ImageUpload from '../inputs/ImageUpload';
 
 
 enum STEPS {
@@ -173,6 +174,22 @@ const RentModal = () => {
         <hr />
       </div>
     )
+  }
+
+  if (step === STEPS.IMAGES) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Upload some photos of your place"
+          subtitle="Show guests what your place looks like!"
+        />
+        <ImageUpload
+          // value={imageSrc}
+          // onChange={(value) => setCustomValue('imageSrc', value)}
+        />
+      </div>
+    )
+
   }
 
   return (

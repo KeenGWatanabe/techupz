@@ -23,7 +23,7 @@ terminal: ubuntu-wsl
 github: https://github.com/KeenGWatanabe/techupz
 
 
-# initialize project
+# initialize project @ 02:21
 ```shell  (window/WSL)
 npx create-next-app --typescript --use-yarn
 ```
@@ -71,7 +71,7 @@ body,
   height: 100%;
 }
 ```
-# create /app/components folder
+# create /app/components folder @ 09:30
 
 # react-icons
 ```shell (window/WSL)
@@ -91,7 +91,7 @@ npm install -D prisma
 
 npx prisma init
 ```
-![npx prisma init](/alife_wsl/DOCS/PICS/npxPrismaInit.png)
+![yarn prisma init]
 Change postgresql to mongodb
 
 # install prisma.io extension
@@ -126,7 +126,7 @@ npm install @prisma/client @auth/prisma-adapter
 npm install prisma --save-dev
 ```
 
-# bcrypt
+# bcrypt @ 2:09:27
 ```shell
 (window/WSL-js provides its own types defn)
 yarn add bcryptjs
@@ -226,17 +226,24 @@ Copy
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
 
-## Marker issues
+## Marker issues so the follow were added
 create mode 100644 app/components/Map.tsx
 create mode 100644 app/components/Map/MarkerWrapper.tsx
 create mode 100644 public/images/location.svg
 ```bash
+(window/WSL)
 yarn add file-loader --save-dev
+(debian/linux)
 npm add file-loader --save-dev
 ```
 
 Map/MarkerWrapper.tsx 3:54:04
 Counter.tsx 4:17:02
+
+# Cloudinary 4:19:07
+https://cloudinary.com/
+sign up for free, 
+sign up with google (mckeen.it)
 
 
 # Deployment to Vercel
