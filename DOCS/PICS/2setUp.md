@@ -258,6 +258,21 @@ npm install next-cloudinary
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
 <Your Cloud Name> is from your https://cloudinary.com/ account
 
+3. uploadPreset="" 4:27:40
+login cloudinary 
+> settings 
+> Product environment settings 
+> Upload 
+> + Add Upload Preset
+![UploadPresetSettings](/DOCS/PICS/UploadPresetSettings.png)
+> Upload preset name: <anyName>
+> Signing mode: Unsigned
+Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
+![uploadPreset](/DOCS/PICS/uploadPreset.png)
+
+stop at 4:29:23 uploadPresets
+
+
 ```bash
 (window/WSL)
 

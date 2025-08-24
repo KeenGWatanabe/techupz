@@ -2,7 +2,7 @@
 
 import { CldUploadWidget } from 'next-cloudinary';
 import Image from 'next/image';
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { TbPhotoPlus } from 'react-icons/tb';
 
 declare global {
@@ -24,8 +24,8 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
 
   return (
     <CldUploadWidget
-      onUpload={handleUpload}
-      uploadPreset="techupz"
+      onSuccess={handleUpload} //onUpload is deprecated
+      uploadPreset="techupzbnb"
       options={{
         maxFiles: 1
       }}
