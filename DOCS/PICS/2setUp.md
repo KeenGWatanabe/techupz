@@ -270,7 +270,7 @@ login cloudinary
 Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
 ![uploadPreset](/DOCS/PICS/uploadPreset.png)
 
-stop at 4:32:23 uploadPresets
+stop at 4:49:00 app/api/listings
 
 
 ```bash
