@@ -111,7 +111,7 @@ npm install @prisma/client
 
 npx prisma db push
 ```
-![npx prisma db push](/DOCS/PICS/npxPrismaDbPush.png)
+![npx prisma db push](/alife_wsl/DOCS/PICS/npxPrismaDbPush.png)
 
 # prima next-auth
 src: https://authjs.dev/getting-started/adapters/prisma
@@ -269,7 +269,7 @@ login cloudinary
 Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
 ![uploadPreset](/DOCS/PICS/uploadPreset.png)
 
-stop at 4:49:00 app/api/listings
+stop at 4:56:14 EmptyState.tsx
 
 
 ```bash

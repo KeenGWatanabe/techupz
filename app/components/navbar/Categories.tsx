@@ -30,8 +30,8 @@ export const categories = [
 ];
 
 const Categories = () => {
-  // const params = useSearchParams();
-  // const category = params?.get('category');
+  const params = useSearchParams();
+  const category = params?.get('category');
   const pathname = usePathname();
 
   const isMainPage = pathname === '/';
@@ -56,7 +56,7 @@ const Categories = () => {
           <CategoryBox
             key={item.label} 
             label={item.label}
-            // selected={category === item.label}
+            selected={category === item.label}
             icon={item.icon}
           />
         ))}

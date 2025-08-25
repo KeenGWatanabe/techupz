@@ -18,31 +18,31 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
   selected
 }) => {
   const router = useRouter();
-  // const params = useSearchParams();
+  const params = useSearchParams();
 
-  // const handleClick = useCallback(() => {
-  //   let currentQuery = {};
+  const handleClick = useCallback(() => {
+    let currentQuery = {};
 
-  //   if (params) {
-  //     currentQuery = qs.parse(params.toString());
-  //     }
+    if (params) {
+      currentQuery = qs.parse(params.toString());
+      }
 
-  //     const updatedQuery: any = {
-  //       ...currentQuery,
-  //       category: label
-  //     }
+      const updatedQuery: any = {
+        ...currentQuery,
+        category: label
+      }
 
-  //     if (params?.get('category') === label) {
-  //       delete updatedQuery.category;
-  //     }
+      if (params?.get('category') === label) {
+        delete updatedQuery.category;
+      }
 
-  //     const url = qs.stringifyUrl({
-  //       url: '/',
-  //       query: updatedQuery
-  //     }, { skipNull: true });
+      const url = qs.stringifyUrl({
+        url: '/',
+        query: updatedQuery
+      }, { skipNull: true });
 
-  //     router.push(url);
-  // }, [label, params, router]);
+      router.push(url);
+  }, [label, params, router]);
 
   return (
     <div 
