@@ -68,3 +68,114 @@ app/api/favorites/listing/[id]/route.ts      // /api/favorites/listing/abc123
 But **your current structure is the recommended approach** for RESTful API design where the resource ID is part of the URL path rather than query parameters.
 
 Your implementation is correct and follows Next.js App Router best practices! 🎉
+
+# variations from tutorial, newer Nextjs Params ##################
+Err:
+Error: Route "/api/favorites/[listingId]" used `params.listingId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at POST (app/api/favorites/[listingId]/route.ts:20:10)
+    
+Solution:    
+This error occurs because in newer versions of Next.js, `params` is now a **Promise** that needs to be awaited. Here's the fix:
+
+## Updated Solution:
+
+```typescript
+import { NextResponse } from "next/server";
+
+import getCurrentUser from "@/app/actions/getCurrentUser";
+import prisma from "@/app/libs/prismadb";
+
+export async function POST(
+  request: Request,
+  { params }: { params: Promise<{ listingId: string }> }  // params is a Promise
+) {
+  const currentUser = await getCurrentUser();
+  
+  if (!currentUser) {
+    return NextResponse.error();
+  }
+
+  const { listingId } = await params;  // Await the params here
+
+  if (!listingId || typeof listingId !== "string") {
+    throw new Error("Invalid ID");
+  }
+
+  let favoriteIds = [...(currentUser.favoriteIds || [])];
+
+  favoriteIds.push(listingId);
+
+  const user = await prisma.user.update({
+    where: {
+      id: currentUser.id
+    },
+    data: {
+      favoriteIds
+    }
+  });
+
+  return NextResponse.json(user);
+}
+
+export async function DELETE(
+  request: Request,
+  { params }: { params: Promise<{ listingId: string }> }  // params is a Promise
+) {
+  const currentUser = await getCurrentUser();
+  
+  if (!currentUser) {
+    return NextResponse.error();
+  }
+
+  const { listingId } = await params;  // Await the params here
+
+  if (!listingId || typeof listingId !== "string") {
+    throw new Error("Invalid ID");
+  }
+
+  let favoriteIds = [...(currentUser.favoriteIds || [])];
+
+  favoriteIds = favoriteIds.filter(id => id !== listingId);
+
+  const user = await prisma.user.update({
+    where: {
+      id: currentUser.id
+    },
+    data: {
+      favoriteIds
+    }
+  });
+
+  return NextResponse.json(user);
+}
+```
+
+## Key Changes:
+
+1. **`params` is now a Promise**: `{ params: Promise<{ listingId: string }> }`
+2. **Await params**: `const { listingId } = await params;`
+
+## Alternative cleaner syntax:
+
+```typescript
+export async function POST(
+  request: Request,
+  { params }: { params: Promise<{ listingId: string }> }
+) {
+  const { listingId } = await params;  // Await first thing
+  const currentUser = await getCurrentUser();
+  
+  // ... rest of your code
+}
+```
+
+## Why this change happened:
+
+Next.js recently updated to make `params` asynchronous to support:
+- **Server Components**: Better integration with async components
+- **Performance**: More efficient data loading
+- **Concurrent Features**: Preparation for future React features
+
+The error message you're seeing is a warning that becomes an error in production builds to ensure compatibility with the latest Next.js features.
+
+This change should resolve both your local terminal error and the CI build failure.
