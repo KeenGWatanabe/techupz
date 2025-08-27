@@ -269,7 +269,7 @@ login cloudinary
 Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
 ![uploadPreset](/DOCS/PICS/uploadPreset.png)
 
-stop at 5:17:20 date-fns
+stop at 5:22:20 button
 # Date fns
 ```bash
 (window/WSL)
