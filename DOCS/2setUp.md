@@ -269,7 +269,6 @@ login cloudinary
 Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
 ![uploadPreset](/DOCS/PICS/uploadPreset.png)
 
-stop at 5:22:20 button
 # Date fns
 ```bash
 (window/WSL)
@@ -277,7 +276,13 @@ yarn add date-fns
 (debian/linux)
 npm install date-fns
 ```
-stop at : :
+
+# api if dynamic route, 
+sub folder, must always [listingID]/route.ts
+route.ts handles /api/favorites/${listingId}
+[dynamicRouteApi](/DOCS/4DynamicRouteApi.md)
+
+stop at 5:38:52 favorites
 
 ```bash
 (window/WSL)
