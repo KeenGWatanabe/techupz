@@ -282,7 +282,7 @@ sub folder, must always [listingID]/route.ts
 route.ts handles /api/favorites/${listingId}
 [dynamicRouteApi](/DOCS/4DynamicRouteApi.md)
 
-stop at 6:02:53 getListingById.ts
+stop at 6:02:53 Params fix
 
 ```bash
 (window/WSL)

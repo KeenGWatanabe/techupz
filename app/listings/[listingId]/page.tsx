@@ -10,9 +10,20 @@ interface IParams {
   listingId: string;
 }
 
-const ListingPage = async ({ params }: { params: IParams }) => {
-  const listing = await getListingById(params);
-  const currentUser = await getCurrentUser();
+export default async function ListingPage({
+  params,
+}: {
+  params: Promise<{ listingId: string }>;
+}) {
+  // Await the params first
+  const { listingId } = await params;
+
+  // Fetch data in parallel for better performance
+  const [listing, currentUser] = await Promise.all([
+    getListingById({ listingId }),
+    getCurrentUser(),
+  ]);
+  
   if (!listing) {
     return (
       <ClientOnly>
@@ -29,5 +40,3 @@ const ListingPage = async ({ params }: { params: IParams }) => {
     </ClientOnly>
   );
 };
-
-export default ListingPage;
