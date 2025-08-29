@@ -282,7 +282,16 @@ sub folder, must always [listingID]/route.ts
 route.ts handles /api/favorites/${listingId}
 [dynamicRouteApi](/DOCS/4DynamicRouteApi.md)
 
-stop at 6:16:45 Listinginfo.tsx
+# install react-date-range
+```bash
+(window/WSL)
+yarn add react-date-range
+yarn add -D @types/react-date-range
+(debian/linux)
+npm install react-date-range
+npm install -D @types/react-date-range
+```
+stop at 6:34:00 Calendar
 
 ```bash
 (window/WSL)
