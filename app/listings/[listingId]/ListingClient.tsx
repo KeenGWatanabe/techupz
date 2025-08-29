@@ -1,5 +1,6 @@
 'use client';
 
+import { Range } from "react-date-range";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
@@ -12,9 +13,9 @@ import { categories } from "@/app/components/navbar/Categories";
 import Container from "@/app/components/Container";
 import ListingHead from "@/app/components/listings/ListingHead";
 import ListingInfo from "@/app/components/listings/ListingInfo";
+import ListingReservation from "@/app/components/listings/ListingReservation";
 
 import useLoginModal from "@/app/hooks/useLoginModal";
-import ListingReservation from "@/app/components/listings/ListingReservation";
 
 const initialDateRange = {
   startDate: new Date(),
@@ -54,7 +55,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
   const [isLoading, setIsLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(listing.price);
-  const [dateRange, setDateRange] = useState(initialDateRange);
+  const [dateRange, setDateRange] = useState<Range>(initialDateRange);
 
   const onCreateReservation = useCallback(() => {
     if (!currentUser) {

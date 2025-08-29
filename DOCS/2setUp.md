@@ -291,7 +291,7 @@ yarn add -D @types/react-date-range
 npm install react-date-range
 npm install -D @types/react-date-range
 ```
-stop at 6:34:00 Calendar
+stop at 6:42:30 Calendar
 
 ```bash
 (window/WSL)
