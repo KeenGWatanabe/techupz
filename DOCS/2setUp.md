@@ -291,7 +291,9 @@ yarn add -D @types/react-date-range
 npm install react-date-range
 npm install -D @types/react-date-range
 ```
-stop at 6:55:06 Reservations
+*** 6:45:00 stop here if w/o Reservations
+*** at 6:55:06 Reservations Added
+stop at 6:55:06 
 
 ```bash
 (window/WSL)
