@@ -1,5 +1,6 @@
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getListingById from "@/app/actions/getListingById";
+import getReservations from "@/app/actions/getReservations";
 
 import ClientOnly from "@/app/components/ClientOnly";
 import EmptyState from "@/app/components/EmptyState";
@@ -19,9 +20,10 @@ export default async function ListingPage({
   const { listingId } = await params;
 
   // Fetch data in parallel for better performance
-  const [listing, currentUser] = await Promise.all([
+  const [listing, currentUser, reservations] = await Promise.all([
     getListingById({ listingId }),
     getCurrentUser(),
+    getReservations({ listingId }),
   ]);
   
   if (!listing) {
@@ -35,6 +37,7 @@ export default async function ListingPage({
     <ClientOnly>
       <ListingClient
         listing={listing}
+        reservations={reservations}
         currentUser={currentUser}
       />
     </ClientOnly>
