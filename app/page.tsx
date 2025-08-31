@@ -6,12 +6,13 @@ import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
 
-interface HomeProps {
-  searchParams: IListingsParams
-}
+// interface HomeProps {
+//   searchParams: IListingsParams
+// }
 
-const Home = async ({ searchParams }: HomeProps) => {
-  const listings = await getListings(searchParams);
+const Home = async ({ searchParams}: { searchParams: Promise<IListingsParams> }) => {
+  const resolvedSearchParams = await searchParams;
+  const listings = await getListings(resolvedSearchParams);
   const currentUser = await getCurrentUser();
   
 if (listings.length === 0) {
@@ -19,8 +20,7 @@ if (listings.length === 0) {
       <ClientOnly>
         <EmptyState showReset/>
       </ClientOnly>
-    )
-
+    );
   }
 
   return (
