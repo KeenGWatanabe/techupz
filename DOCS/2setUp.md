@@ -293,7 +293,7 @@ npm install -D @types/react-date-range
 ```
 *** 6:45:00 stop here if w/o Reservations
 *** at 6:55:06 Reservations Added
-stop 7:53:38 Properties
+stop 8:05:38 Filters
 
 ```bash
 (window/WSL)
