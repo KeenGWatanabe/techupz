@@ -39,10 +39,12 @@ const RegisterModal = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
       setIsLoading(true);
-      axios
-        .post('/api/register', data)
+
+      axios.post('/api/register', data)
         .then(() => {
+          toast.success(`${data.email} Registered!`);
           registerModal.onClose();
+          loginModal.onOpen();
         })
         .catch((error) => {
           toast.error("Something went wrong!");

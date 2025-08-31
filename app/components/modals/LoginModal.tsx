@@ -49,7 +49,7 @@ const LoginModal = () => {
         setIsLoading(false);
 
         if(callback?.ok) {
-          toast.success('Logged in');
+          toast.success(`${data.email} Logged in`);
           router.refresh();
           loginModal.onClose();
         }
