@@ -293,7 +293,16 @@ npm install -D @types/react-date-range
 ```
 *** 6:45:00 stop here if w/o Reservations
 *** at 6:55:06 Reservations Added
-stop 8:22:27 Filters
+
+# install react-spinners
+```bash
+(window/WSL)
+yarn add react-spinners
+(debian/linux)
+npm install react-spinners
+```
+
+stop 8:37:27 Middleware
 
 ```bash
 (window/WSL)
