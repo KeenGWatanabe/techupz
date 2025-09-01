@@ -46,7 +46,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
   return (
     <div 
-      onClick={() => {}}
+      onClick={handleClick}
       className={`
         flex 
         flex-col 
@@ -63,7 +63,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         `}
     >
       <Icon size={26} />
-      <div className="text-sm font-medium">
+      <div className="font-medium text-sm">
         {label}
       </div>
     </div>  
