@@ -1,12 +1,16 @@
 # alifeWSL | wsl | yarn 
+### acct ###
+github: techupz; 
+mongoDB: alifeWSL;
+vercel: techupzbnb.vercel.app;
+### acct ###
+
 
 Yarn : Linux, WSL
 Accessing the project follow below steps:
-Open VS code, any folder is fine.
-select bash / Ubuntu terminal, or type 'wsl' at powershell terminal,
+Open Ubuntu terminal, from /home/rger$  
 you will be at root/home/rger aka ~/
-
-cd ~nextjs/techupz into project directory, and type `code .`
+cd into nextjs/techupz$  and type `code .`
 
 
 
@@ -139,11 +143,6 @@ npm install -D @types/bcrypt
 For Vercel deployment:
 Set Mongo Atlas whitelist IP address or access from anywhere 0.0.0.0/0
 
-### acct ###
-github: techupz 
-mongoDB: alifeWSL
-vercel: techupzbnb.vercel.app
-### acct ###
 
 # github auth
 github settings > Developer settings > 
