@@ -139,6 +139,11 @@ npm install -D @types/bcrypt
 For Vercel deployment:
 Set Mongo Atlas whitelist IP address or access from anywhere 0.0.0.0/0
 
+### acct ###
+github: techupz 
+mongoDB: alifeWSL
+vercel: techupzbnb.vercel.app
+### acct ###
 
 # github auth
 github settings > Developer settings > 
